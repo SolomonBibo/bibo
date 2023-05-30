@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BIBO SAFARIS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Favicon -->
+    <link href="img/Bibo logo(1).png" rel="icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Sandbox -->
+
+</head>
+
+<body oncontextmenu="return false">
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                  <div class="d-inline-flex align-items-center">
+                    <p><i class="fa fa-envelope mr-2"></i><a href="emailto:info@bibosafaris.com"></a>info@bibosafaris.com</a></p>
+                    <p class="text-body px-3">|</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i><a href="tel:+256 701842342">+256 701 842 342</a></p>
+                </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">BIBO</span> SAFARIS</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+                        
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+ 
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                
+                <h3 class="display-4 text-white text-uppercase">Tour Packages</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Destination</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+<!--
+    
+    <div class="container-fluid booking mt-5 pb-5">
+        <div class="container pb-5">
+            <div class="bg-light shadow" style="padding: 30px;">
+                <div class="row align-items-center" style="min-height: 60px;">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected>Destination</option>
+                                        <option value="1">Destination 1</option>
+                                        <option value="2">Destination 1</option>
+                                        <option value="3">Destination 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <div class="date" id="date1" data-target-input="nearest">
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <div class="date" id="date2" data-target-input="nearest">
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected>Duration</option>
+                                        <option value="1">Duration 1</option>
+                                        <option value="2">Duration 1</option>
+                                        <option value="3">Duration 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     Booking End -->
+    
+
+    <!-- Destination Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">TOUR PACKAGES</h6>
+                <h3>Below are some of our top Affordable Uganda Safari Packages that You can choose from (These packages can be Tailored  based on your interests to offer you a memorable African safari in Uganda)</h3>
+            </div>
+            </div>
+            </div>
+        
+        
+     
+            <section>
+                <div class="place">
+                  <img src="img/safari.jpg" alt="Place 1" class="place-image">
+                  
+                  <div class="place-details">
+                    <h3 class="place-name">The Mega Cruise </h3><br>
+                    <div class="icons">
+                   <h1> <i class="fa fa-calendar-alt text-primary mr-2"></i>14 days</h1>
+                  <h4>  <i class="fa fa-user text-primary mr-2"></i>5-20 People</h4>
+                   <h5> <i class="fa fa-map-marker-alt text-primary mr-2"></i>Uganda</h5>
+                   </div>
+<br>
+<b style="background:greenyellow;border-radius:5px;">Safari Summary</b>
+                    <p class="place-description"><b>Day 1:</b> Murchison Falls National Park, Visit Ziwa Rhino Sanctuary en route<hr>
+                        <b>Day 2:</b> Game drive & an afternoon boat cruise along the Nile and hike to the top of the falls<hr>
+                        <b>Day 3:</b> Hoima. Visit Kibiro Salt Gardens en route<hr>
+                        <b>Day 4:</b> Fort Portal and visit the Amabere g’ Nnyinamwiru caves and fort portal crater lake area<hr>
+                        <b>Day 5:</b> Chimpanzee trekking & Bigodi wetland walk<hr>
+                        <b>Day 6:</b> Transfer to Queen Elizabeth NP, Visit Rwenzori Art foundation en route & do an afternoon launch cruise along long Kazinga Channel<hr>
+                        <b>Day 7:</b> Game drive & transfer to Ishasha sector<hr>
+                        <b>Day 8:</b> Morning game drive in Ishasha and transfer to Bwindi Impenetrable National Park.<hr>
+                        <b>Day 9:</b> Gorilla trekking & Mgahinga Gorilla National Park<hr>
+                        <b>Day 10:</b> Golden monkey tracking in Mgahinga and transfer to Lake Bunyonyi.<hr>
+                        <b>Day 11:</b> Whole day relaxation at Lake Bunyonyi with 29 Islands dubbed the lake of a thousand Islands<hr>
+                        <b>Day 12:</b> Lake Mburo NP & game drive<hr>
+                        <b>Day 13:</b> Game walking safari & transfer to Kampala via the Uganda Equator crossing Kayabwe<hr>
+                        <b>Day 14:</b> Jinja – boat cruise and the source of the Nile & departure<hr>
+                    
+                    </p>
+                    <div class="rating">
+                      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <span class="rating-value">5.0(154)</span>
+                    </div>
+                    <h5>  <i class="fa fa-user text-primary mr-2"><i class="fa fa-coin text-primary mr-2"></i></i>Price Per Head</h5>
+                    <div class="price">
+                        <input type="radio" name="tripType" value="luxuryTrip" id="luxury">
+                       Luxury Trip ($)<label for="luxury">580.98 </label>
+                      </div>
+                      <div class="price">
+                        <input type="radio" name="tripType" value="midrangeTrip" id="midrange">
+                       Midrange Trip ($) <label for="midrange">580.98 </label>
+                      </div>
+                      <div class="price">
+                        <input type="radio" name="tripType" value="budgetTrip" id="budget">
+                        Budget Trip ($) <label for="budget">580.98</label>
+                        
+                      </div>
+                      <button class="book-button">Book Now</button>
+                  <div class="tour-details-bar">
+  <ul class="tour-details-menu">
+    <li class="active" data-section="overview">Overview</li>
+    <li data-section="itinerary">Itinerary</li>
+    <li data-section="reviews">Includes</li>
+    <li data-section="gallery">Route Map </li>
+  </ul>
+</div>
+<div class="tour-details-content">
+  <div class="section" id="overview-section">
+    <!-- Content for Overview section goes here -->
+    The 14 Days wildlife and Gorilla Uganda adventure safari is an all inclusive fort night tour; it allows you to explore the remarkable physical endowments of Uganda known to be the Pearl of Africa by Winston Churchill. This pleasant Adventure is quite unique in that it involves an encounter with the big five (elephant, Rhino, leopard, Buffalo and lion) in Ziwa Rhino Sanctuary, Murchison Falls and Queen Elizabeth National Parks, an adventurous boat cruise along Nile River and Kazinga Channelwith prospective views of the Hippos, Nile Crocodiles and the rare shoebill stork, Golden monkey trekking in Mgahinga gorilla National Park, gorilla trekking in Bwindi Impenetrable National Park, a memorable boat cruise at the source of River Nile- the longest river in the world, Jinja and whole day relaxation with priceless ambiance at lake Bunyonyi known to be the lake of a thousand Islands and the second deepest lake in Africa.
+  </div>
+  <div class="section" id="itinerary-section">
+    <!-- Content for Itinerary section goes here -->
+
+  </div>
+  <div class="section" id="reviews-section">
+    <!-- Content for Reviews section goes here -->
+    <div class="inclusions">
+        <div class="included-side">
+          <h3>INCLUDED</h3>
+          <ul>
+            <li><span class="checkmark">&#x2713;</span> All activities / services as per itinerary.</li>
+            <li><span class="checkmark">&#x2713;</span> 4WD Vehicle – with a pop – up roof for scenic viewing.</li>
+            <li><span class="checkmark">&#x2713;</span> A professional English speaking driver / guide.</li>
+            <li><span class="checkmark">&#x2713;</span> Site entrance fees.</li>
+            <li><span class="checkmark">&#x2713;</span> Free Wi-Fi internet in the vehicle.</li>
+            <li><span class="checkmark">&#x2713;</span> All ground transportation and fuel.</li>
+            <li><span class="checkmark">&#x2713;</span> Meals.</li>
+            <li><span class="checkmark">&#x2713;</span> Drinking water in the vehicle.</li>
+            
+          </ul>
+        </div>
+        <div class="excluded-side">
+          <h3>EXCLUDED</h3>
+          <ul>
+            <li><span class="cross">&#10007;</span> Visas</li>
+            <li><span class="cross">&#10007;</span> International air fares.</li>
+            <li><span class="cross">&#10007;</span> Activities / services not included in the itinerary.</li>
+            <li><span class="cross">&#10007;</span> Alcoholic drinks / wines.</li>
+            <li><span class="cross">&#10007;</span> Laundry and any service of personal nature.</li>
+            <li><span class="cross">&#10007;</span> Travel insurance cover.</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="section" id="gallery-section">
+        <!-- Content for Gallery section goes here -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d4085397.402490056!2d31.419606999999996!3d0.532667!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x177d86cd37ba81af%3A0x9daba139d6433d1f!2sEntebbe%20International%20Airport%2C%2014%20Kitaasa%20Rd%2C%20Entebbe!3m2!1d0.045107999999999995!2d32.4426736!4m5!1s0x177dbc0f9d74b39b%3A0x4538903dd96b6fec!2sKampala!3m2!1d0.34759639999999997!2d32.5825197!4m5!1s0x176fdb928528cd73%3A0xe6fc75943c0e260f!2sMurchison%20Falls%20National%20Park%20Northern%20Gate%20(Tangi)%2C%20CGW6%2BFQP%2C%20Pakwach!3m2!1d2.4462219999999997!2d31.511940799999998!4m5!1s0x1762315eb5fec84b%3A0xe86bf6d0457d4177!2sKibale%20National%20Park!3m2!1d0.436396!2d30.3667061!4m5!1s0x1761f72591e25f39%3A0xe32f5e1ba62d48f8!2sQueen%20Elizabeth%20National%20Park%2C%20Kasese!3m2!1d0.1564263!2d30.0788069!4m5!1s0x19dc2704d519c4f9%3A0x412c1f73ed7fb889!2sBwindi%20Impenetrable%20Forest%20National%20Park%2C%20Buhoma!3m2!1d-1.0337306!2d29.6931655!4m5!1s0x19dc467ee4c0e04f%3A0x96c40f5793bdff5f!2sGahinga%20Volcano%2C%20Rwanda!3m2!1d-1.3868026999999998!2d29.6462202!4m5!1s0x19d9a9435d3b5e13%3A0x1ffdd0cace9e206!2sLake%20Mburo%20National%20Park!3m2!1d-0.5989437!2d30.973218!4m5!1s0x177e7b862c391f47%3A0x300fe90f956a9f4a!2sJinja!3m2!1d0.4478566!2d33.2026122!4m5!1s0x177d86cd37ba81af%3A0x9daba139d6433d1f!2sEntebbe%20International%20Airport%2C%2014%20Kitaasa%20Rd%2C%20Entebbe!3m2!1d0.045107999999999995!2d32.4426736!5e0!3m2!1sen!2sug!4v1684761509392!5m2!1sen!2sug"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+  <div class="section" id="book-now-section">
+    <!-- Content for Book Now section goes here -->
+
+  </div>
+</div>
+</div>
+  </div>
+       
+ 
+</section>
+
+
+
+
+<section>
+<div class="place">
+                  <img src="img/safari2.jpg" alt="Place 1" class="place-image">
+                  
+                  <div class="place-details">
+                    <h3 class="place-name">In the Wild </h3><br>
+                    <div class="icons">
+                   <h1> <i class="fa fa-calendar-alt text-primary mr-2"></i>9 days</h1>
+                  <h4>  <i class="fa fa-user text-primary mr-2"></i>3-9 People</h4>
+                   <h5> <i class="fa fa-map-marker-alt text-primary mr-2"></i>Uganda</h5>
+</div><br>
+<b style="background:greenyellow;border-radius:5px;">Safari Summary</b>
+                    <p class="place-description"><b>Day 1:</b> Murchison Falls National Park, Visit Ziwa Rhino Sanctuary en route<hr>
+                        <b>Day 2:</b> Game drive & an afternoon boat cruise along the Nile and hike to the top of the falls<hr>
+                        <b>Day 3:</b> Hoima. Visit Kibiro Salt Gardens en route<hr>
+                        <b>Day 4:</b> Fort Portal and visit the Amabere g’ Nnyinamwiru caves and fort portal crater lake area<hr>
+                        <b>Day 5:</b> Chimpanzee trekking & Bigodi wetland walk<hr>
+                        <b>Day 6:</b> Transfer to Queen Elizabeth NP, Visit Rwenzori Art foundation en route & do an afternoon launch cruise along long Kazinga Channel<hr>
+                        <b>Day 7:</b> Game drive & transfer to Ishasha sector<hr>
+                        <b>Day 8:</b> Morning game drive in Ishasha and transfer to Bwindi Impenetrable National Park.<hr>
+                        <b>Day 9:</b> Gorilla trekking & Mgahinga Gorilla National Park<hr>
+                        <b>Day 10:</b> Golden monkey tracking in Mgahinga and transfer to Lake Bunyonyi.<hr>
+                        <b>Day 11:</b> Whole day relaxation at Lake Bunyonyi with 29 Islands dubbed the lake of a thousand Islands<hr>
+                        <b>Day 12:</b> Lake Mburo NP & game drive<hr>
+                        <b>Day 13:</b> Game walking safari & transfer to Kampala via the Uganda Equator crossing Kayabwe<hr>
+                        <b>Day 14:</b> Jinja – boat cruise and the source of the Nile & departure<hr>
+                    
+                    </p>
+                    <div class="rating">
+                      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <span class="rating-value">5.0(154)</span>
+                    </div>
+                    <h5>  <i class="fa fa-user text-primary mr-2"><i class="fa fa-coin text-primary mr-2"></i></i>Price Per Head</h5>
+                    <div class="price">
+                        <input type="radio" name="tripType" value="luxuryTrip" id="luxury">
+                       Luxury Trip ($)<label for="luxury">580.98 </label>
+                      </div>
+                      <div class="price">
+                        <input type="radio" name="tripType" value="midrangeTrip" id="midrange">
+                       Midrange Trip ($) <label for="midrange">580.98 </label>
+                      </div>
+                      <div class="price">
+                        <input type="radio" name="tripType" value="budgetTrip" id="budget">
+                        Budget Trip ($) <label for="budget">580.98</label>
+                        
+                      </div>
+                        <button class="book-button">Book Now</button>
+                      <div class="tour-details-bar">
+                        <ul class="tour-details-menu">
+                          <li class="active" data-section2="overview">Overview</li>
+                          <li data-section2="itinerary">Itinerary</li>
+                          <li data-section2="reviews">Includes</li>
+                          <li data-section2="gallery">Route Map </li>
+                        </ul>
+                      </div>
+                      <div class="tour-details-content">
+                        <div class="section2" id="overview-section2">
+                            <!-- Content for Overview section 2 goes here -->
+                            The 14 Days wildlife and Gorilla Uganda adventure safari is an all-inclusive fortnight tour; it allows you to explore the remarkable physical endowments of Uganda known to be the Pearl of Africa by Winston Churchill. This pleasant Adventure is quite unique in that it involves an encounter with the big five (elephant, Rhino, leopard, Buffalo and lion) in Ziwa Rhino Sanctuary, Murchison Falls and Queen Elizabeth National Parks, an adventurous boat cruise along Nile River and Kazinga Channel with prospective views of the Hippos, Nile Crocodiles and the rare shoebill stork, Golden monkey trekking in Mgahinga Gorilla National Park, gorilla trekking in Bwindi Impenetrable National Park, a memorable boat cruise at the source of River Nile - the longest river in the world, Jinja, and a whole day relaxation with priceless ambiance at Lake Bunyonyi known to be the lake of a thousand Islands and the second deepest lake in Africa.
+                          </div>
+                          
+                          <div class="section2" id="itinerary-section2">
+                            <!-- Content for Itinerary section 2 goes here -->
+                            This is the itinerary section 2. Replace this text with the actual itinerary content for section 2.
+                          </div>
+                          
+                          <div class="section2" id="reviews-section2">
+                            <!-- Content for Reviews section 2 goes here -->
+                            This is the reviews section 2. Replace this text with the actual reviews content for section 2.
+                          </div>
+                          
+                          <div class="section2" id="gallery-section2">
+                            <!-- Content for Gallery section 2 goes here -->
+                            This is the gallery section 2. Replace this text with the actual gallery content for section 2.
+                          </div>
+                        </div>
+                      </div>
+                      
+
+
+
+
+
+
+
+  
+  
+
+            
+
+
+
+                <!-- Add more place elements here -->
+              </section>
+        </div>
+    </div>
+
+           </div>
+           <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span onclick = "myfunction()" class="close">&times;</span>
+              <p id="errorMessage"></p>
+               <img class="image" src="img/Bibo.png" alt="">
+               Copyright &copy; <a href="www.bibosafaris.com">www.bibosafaris.com</a>. All Rights Reserved.</a>
+            </div>
+          </div>
+          
+          <div id="bookingModal" class="modal2">
+            <div class="modal-content2">
+              <span class="close2"  id="closeButton">&times;</span>
+          
+              <h2 class="modal-title">Trip Booking Summary</h2>
+              <div id="bookingSummary"></div>
+              <h2 class="modal-title">Tourist Details</h2>
+              <form id="bookingForm">
+                <div class="form-group2">
+                  <label for="tripType">Trip Type:</label>
+                  <input type="text" id="tripType" name="tripType" readonly required>
+                </div>                
+                <div class="form-group2">
+                  <label for="name">Booking Ticket(check summary):</label>
+                  <input type="text" id="ticket" name="ticket" readonly required>
+                </div>
+                <div class="form-group2">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group2">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                  </div>              
+                <div class="form-group2">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group2">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group2">
+                  <label for="numberOfPeople">Number Of People:</label>
+                  <input type="number" id="numberOfPeople" name="numberOfPeople" required>
+                </div>
+                <div class="form-group2">
+                  <label for="date">Depart Date:</label>
+                  <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group2">
+                  <label>Additional Services:</label>
+                  <div class="additional-services">
+                    <label>
+                      <input type="checkbox" id="additionalService" name="additionalService" value="photography&videocoverage" onclick="handleCheckboxChange()">
+                      Photo & Video Footage Coverage (Extra - $150.00)
+                    </label>
+                  </div>
+                  <div id="total"></div>
+                  <div id="paymentOptions" class="form-group2">
+                    <label>Payment Options Available:</label>
+                    <div id="paymentLogos">
+                      <img class="logo1" src="img/mtn.png" alt="">
+                      <img class="logo1" src="img/cente.png" alt="">
+                      <img class="logo1" src="img/airtel.webp" alt="">
+                  
+                    </div>
+                    <label>Choose One:</label>
+                    <div class="payment-options">
+                        <label>
+                          <input type="radio" name="paymentOption" value="mobileMoney" required>
+                          <span class="payment-label">
+                            <span class="checkmark"></span>
+                            Mobile Money
+                          </span>
+                        </label>
+                        <label>
+                          <input type="radio" name="paymentOption" value="airtelMoney" required>
+                          <span class="payment-label">
+                            <span class="checkmark"></span>
+                            Airtel Money
+                          </span>
+                        </label>
+                        <label>
+                          <input type="radio" name="paymentOption" value="banktransfer" required>
+                          <span class="payment-label">
+                            <span class="checkmark"></span>
+                            Bank Transfer
+                          </span>
+                        </label>
+                      </div>
+                  </div>
+                  <div id="cardDetailsSection" class="form-group2">
+                    <label for="bankNumber">Account Number: <button class="copy-button" data-clipboard-text="2720001466">Copy</button></label>
+                    <h3 class="title">2720001466</h3><h6>HOLDERSNAME: BIGIRWA SAMALIE</h6>
+                  </div>
+                  <div id="mobileMoneyDetailsSection" class="form-group2">
+                    <label for="mobileNumber">MTN Merchant Code: <button class="copy-button" data-clipboard-text="798668976958">Copy</button></label>
+                    <h3 class="title">2720001466</h3>
+                    <h3>QR Code</h3>
+                    <img class="qrcode" src="img/qr.png" alt="">
+                    
+                  </div>
+                  <div id="airtelMoneyDetailsSection" class="form-group2">
+                    <label for="airtelNumber">Airtel Merchant Code: <button class="copy-button" data-clipboard-text="798668976958">Copy</button></label>
+                    <h3 class="title">2720001466</h3>
+                    <h3>QR Code</h3>
+                    <img class="qrcode" src="img/qr.png" alt="">
+                    
+                  </div>
+                  <h3>Notice:</h3><p>Booking Tickets are only Valid After Payment.Therefore we recommend you pay Before Booking.</p>
+                  <!-- Add your form HTML here -->
+<!-- Add your form HTML here -->
+<div id="paymentLogos">
+    <img class="logo2" src="img/Bibo.png" alt="">
+  </div>
+<button id="paymentButton" class="unique-button">Book Trip</button>
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Pop-up element -->
+<div id="popupMessage" class="popup">
+    <p class="popup-message">Copied to clipboard!</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+
+<script>
+var copyButtons = document.querySelectorAll('.copy-button');
+copyButtons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    var merchantCode = this.getAttribute('data-clipboard-text');
+    copyToClipboard(merchantCode);
+    showPopupMessage();
+
+  setTimeout(function() {
+   hidePopupMessage();
+    
+  }, 3000); // Hide the popup after 3 seconds
+  });
+});
+
+
+
+
+function copyToClipboard(text) {
+  var dummyElement = document.createElement('textarea');
+  dummyElement.value = text;
+  dummyElement.setAttribute('readonly', '');
+  dummyElement.style.position = 'absolute';
+  dummyElement.style.left = '-9999px';
+  document.body.appendChild(dummyElement);
+  dummyElement.select();
+  document.execCommand('copy');
+  document.body.removeChild(dummyElement);
+}
+
+function showPopupMessage() {
+  document.getElementById('popupMessage').classList.add('show');
+}
+
+function hidePopupMessage() {
+  document.getElementById('popupMessage').classList.remove('show');
+}
+
+
+
+  </script>
+
+  <!-- Your existing HTML code -->
+
+  
+    <!-- Firebase libraries -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+  
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyCi_hufIZTzsYtdPGQtvtmKmAkkrydmn_A",
+  authDomain: "abbah-83a7b.firebaseapp.com",
+  databaseURL: "https://abbah-83a7b-default-rtdb.firebaseio.com",
+  projectId: "abbah-83a7b",
+  storageBucket: "abbah-83a7b.appspot.com",
+  messagingSenderId: "379729759051",
+  appId: "1:379729759051:web:e75528d61b02d1e4f536ce",
+  measurementId: "G-H41J2WMR6S"
+      };
+  
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+  
+          // Get a reference to the booking form
+const bookingForm = document.getElementById('bookingForm');
+const loader = document.getElementById('loader'); // Add a loader element
+
+// Listen for form submission
+bookingForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get input values
+  const tripType = document.getElementById('tripType').value;
+  const name = document.getElementById('name').value;
+  const ticket = document.getElementById('ticket').value;
+  const location = document.getElementById('location').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const numberOfPeople = document.getElementById('numberOfPeople').value;
+  const date = document.getElementById('date').value;
+  const additionalServiceCheckbox = document.getElementById('additionalService');
+  const additionalService = additionalServiceCheckbox.checked ? additionalServiceCheckbox.value : 'No';
+  const paymentOption = document.querySelector('input[name="paymentOption"]:checked').value;
+
+  // Construct email message
+  const emailMessage = `
+    Trip Booking Summary:
+    Name: ${name}
+    Location: ${location}
+    Email: ${email}
+    Phone Number: ${phone}
+    Number Of People: ${numberOfPeople}
+    Depart Date: ${date}
+    Additional Service: ${additionalService}
+    Payment Option: ${paymentOption}
+  `;
+
+  // Show the loader
+  loader.style.display = 'block';
+
+  // Save form data in Firebase with retry logic
+  saveFormData({ name, ticket, tripType, location, email, phone, numberOfPeople, date, additionalService, paymentOption });
+
+  // Reset the form
+  bookingForm.reset();
+});
+
+function saveFormData(data, maxRetryAttempts = 3, currentAttempt = 1) {
+  // Add the current date and time to the form data
+  const currentDate = new Date();
+  data.bookingTime = currentDate.getTime();
+
+  // Push the form data to Firebase Realtime Database
+  const bookingRef = ref(database, 'safari bookings');
+  push(bookingRef, data)
+    .then(() => {
+      // Hide the loader
+      loader.style.display = 'none';
+
+      // Show success message
+      showSuccessMessage();
+    })
+    .catch((error) => {
+      console.error('Error saving data to Firebase:', error);
+      if (currentAttempt < maxRetryAttempts) {
+        console.log(`Retrying data saving (Attempt ${currentAttempt + 1})...`);
+        saveFormData(data, maxRetryAttempts, currentAttempt + 1); // Retry the operation
+      } else {
+        console.error('Max retry attempts reached. Giving up on data saving.');
+
+        // Show slow internet popup
+        showPopup('Slow Internet Connection');
+      }
+    });
+}
+
+function showSuccessMessage() {
+  // Create a popup container
+  const popupContainer = document.createElement('div');
+  popupContainer.classList.add('popup-container');
+
+  // Create a success message element
+  const successMessage = document.createElement('div');
+  successMessage.classList.add('success-message');
+  successMessage.textContent = 'Booking made successfully!';
+
+  // Create a refresh button
+  const refreshButton = document.createElement('button');
+  refreshButton.classList.add('refresh-button');
+  refreshButton.textContent = 'OK';
+
+  // Add event listener to the refresh button
+  refreshButton.addEventListener('click', function() {
+    popupContainer.remove(); // Remove the popup container
+    location.reload(); // Refresh the page
+  });
+
+  // Append the success message and refresh button to the popup container
+  popupContainer.appendChild(successMessage);
+  popupContainer.appendChild(refreshButton);
+
+  // Append the popup container to the body
+  document.body.appendChild(popupContainer);
+}
+
+function showPopup(message) {
+  // Create a popup container
+  const popupContainer = document.createElement('div');
+  popupContainer.classList.add('popup-container');
+
+  // Create a popup message element
+  const popupMessage = document.createElement('div');
+  popupMessage.classList.add('popup-message');
+  popupMessage.textContent = message;
+
+  // Create a close button
+  const closeButton = document.createElement('button');
+  closeButton.classList.add('close-button');
+  closeButton.textContent = 'Close';
+
+  // Add event listener to the close button
+  closeButton.addEventListener('click', function() {
+    popupContainer.remove(); // Remove the popup container
+  });
+
+  // Append the popup message and close button to the popup container
+  popupContainer.appendChild(popupMessage);
+  popupContainer.appendChild(closeButton);
+
+  // Append the popup container to the body
+  document.body.appendChild(popupContainer);
+}
+
+
+    </script>
+  </div>
+  <div id="loader"></div>
+                 
+              
+
+
+          
+      
+          
+    
+    <!-- Destination Start -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">Bibo</span>Safaris</h1>
+                </a>
+                <p>Enjoy the Untamed Beauty of the the Pearl of Africa with  our exciting trips.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="destination.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+
+                 
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="destination.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+256 701 842 342</p>
+                <p><i class="fa fa-envelope mr-2"></i>www.bibosafaris.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="www.bibosafaris.com">www.bibosafaris.com</a>. All Rights Reserved.</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="">Solomon Bibo</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

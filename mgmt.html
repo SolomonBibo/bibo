@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BIBO SAFARIS </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lzICf89bRJTVBPn+GM6+jOw/JZfgXa8JChad29YB1jDR5Ym6ZlBKUG1avvSG+n9/hgVGKoBz+mRzr3Y6c+K9zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i><a href="emailto:info@bibosafaris.com"></a>info@bibosafaris.com</a></p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i><a href="tel:+256 701842342">+256 701 842 342</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">BIBO</span> SAFARIS MGMT</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>                
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="text-center mb-3 pb-3">
+        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px; margin-top:20px">TOUR ORDERS</h6>
+        <h3>New Bookings</h3>
+    </div>
+
+    <div id="bookings-container">
+<div class="cards">
+</div>
+</div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
+    
+        const firebaseConfig = {
+          apiKey: "AIzaSyCi_hufIZTzsYtdPGQtvtmKmAkkrydmn_A",
+    authDomain: "abbah-83a7b.firebaseapp.com",
+    databaseURL: "https://abbah-83a7b-default-rtdb.firebaseio.com",
+    projectId: "abbah-83a7b",
+    storageBucket: "abbah-83a7b.appspot.com",
+    messagingSenderId: "379729759051",
+    appId: "1:379729759051:web:e75528d61b02d1e4f536ce",
+    measurementId: "G-H41J2WMR6S"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+// Request permission for notifications
+if (Notification.permission !== 'granted') {
+  Notification.requestPermission();
+}
+const bookingRef = ref(database, 'safari bookings');
+
+onValue(bookingRef, (snapshot) => {
+  const bookingsData = snapshot.val();
+  const bookingsArray = Object.values(bookingsData).reverse();
+
+  const container = document.getElementById('bookings-container');
+  container.innerHTML = '';
+
+  let currentDate = null;
+  let currentContainer = null;
+
+  for (const booking of bookingsArray) {
+    const bookingDate = getFormattedDate(booking.bookingTime);
+
+    // Create a new date heading and container when the date changes
+    if (bookingDate !== currentDate) {
+      // Create a date heading
+      const dateHeading = document.createElement('h1');
+      dateHeading.classList.add('date-heading');
+      dateHeading.textContent = bookingDate;
+      document.body.appendChild(dateHeading); // Append the date heading to the body
+      currentDate = bookingDate;
+
+      // Create a new container for the bookings of the current date
+      currentContainer = document.createElement('div');
+      currentContainer.classList.add('date-container');
+      document.body.appendChild(currentContainer); // Append the container to the body
+    }
+
+    const element = document.createElement('div');
+element.classList.add('booking-card');
+element.innerHTML = `
+  <img src="img/Bibo.png" alt="Company Logo" class="company-logo">
+  <p><strong>Trip Type:</strong> ${booking.tripType}</p>
+  <p><strong>Ticket Number:</strong> ${booking.ticket}</p>
+  <p><strong>Name:</strong> ${booking.name}</p>
+  <p><strong>Location:</strong> ${booking.location}</p>
+  <p><strong>Email:</strong> ${booking.email}</p>
+  <p><strong>Phone Number:</strong> ${booking.phone}</p>
+  <p><strong>Number Of People:</strong> ${booking.numberOfPeople}</p>
+  <p><strong>Depart Date:</strong> ${booking.date}</p>
+  <p><strong>Additional Service:</strong> ${booking.additionalService}</p>
+  <p><strong>Payment Option:</strong> ${booking.paymentOption}</p>
+  <p><strong>Booking Time:</strong> ${getFormattedDateTime(booking.bookingTime)}</p>
+  
+`;
+// Create the "Share" button
+const shareButton = document.createElement('button');
+shareButton.classList.add('share-button');
+shareButton.innerHTML = '<i class="fas fa-share"></i> Share Booking'; // Add the share icon markup
+shareButton.addEventListener('click', function() {
+  const bookingSummary = generateBookingSummary(booking); // Function to generate the booking summary message
+  const message = `Booking Order:\n\n${bookingSummary}`; // Formulate the booking order message
+  sendBooking(message); // Function to send the booking order message
+});
+
+// Function to generate the booking summary message with a title
+function generateBookingSummary(booking, title) {
+  const bookingTitle = title ? `${title}\n` : ''; // Add the title if provided
+  return `${bookingTitle}` +
+         `Trip Type: ${booking.tripType}\n` +
+         `Ticket Number: ${booking.ticket}\n` +
+         `Name: ${booking.name}\n` +
+         `Location: ${booking.location}\n` +
+         `Email: ${booking.email}\n` +
+         `Phone Number: ${booking.phone}\n` +
+         `Number Of People: ${booking.numberOfPeople}\n` +
+         `Depart Date: ${booking.date}\n` +
+         `Additional Service: ${booking.additionalService}\n` +
+         `Payment Option: ${booking.paymentOption}\n` +
+         `Booking Time: ${getFormattedDateTime(booking.bookingTime)}`;
+}
+const bookingSummary = generateBookingSummary(booking, 'Safari Booking Order');
+
+// Function to send the booking order message
+function sendBooking(message) {
+  const destination = '+256701842342'; // Replace with the desired phone number or WhatsApp contact
+  const whatsappURL = `https://wa.me/${destination}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL);
+}
+
+// Append the share button to the booking card
+element.appendChild(shareButton);
+currentContainer.appendChild(element);
+
+// Send browser notification for new booking
+if (booking === bookingsArray[0]) {
+  if (Notification.permission === 'granted') {
+    sendNotification();
+  } else if (Notification.permission !== 'denied') {
+    // Request permission from the user
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        sendNotification();
+      }
+    });
+  }
+}
+
+// Function to send the browser notification
+function sendNotification() {
+  const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+  const notificationTitle = '(Bibo Safaris) New Safari Booking';
+  const notificationOptions = {
+    body: `${booking.name} from ${booking.location} just made a Trip booking!`,
+    icon: 'img/Bibo.png' // Replace with the path to your notification icon
+  };
+
+  if (isMobileDevice) {
+    // Use the `showNotification` method for mobile devices
+    navigator.serviceWorker.ready.then(registration => {
+      registration.showNotification(notificationTitle, notificationOptions);
+    });
+  } else {
+    // Use the `Notification` constructor for desktop browsers
+    new Notification(notificationTitle, notificationOptions);
+  }
+}
+  }});
+
+function getFormattedDate(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleDateString('en-US', { dateStyle: 'long' });
+}
+
+function getFormattedDateTime(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+}
+
+</script>
+ 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
